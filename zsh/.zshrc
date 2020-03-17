@@ -1,6 +1,9 @@
 # Import aliases and functions
 source $HOME/.aliases
 
+export EDITOR=vim
+export TERMINAL=alacritty
+
 # Set up the prompt
 
 autoload -Uz promptinit
@@ -37,7 +40,10 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Add scripts and bin directory to the path
-export PATH="$HOME/scripts:$HOME/bin:$HOME/.krew/bin:$PATH"
+export PATH="$HOME/scripts:$PATH"
+
+# Add the path for krew.  Manages kubectl plugins
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 eval "$(starship init zsh)"
 
@@ -46,6 +52,8 @@ source $HOME/.functions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $HOME/.asdf/asdf.sh
+
+eval "$(direnv hook zsh)"
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
