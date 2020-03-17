@@ -1,3 +1,0 @@
-[submodule "nvim/.config/nvim/plugged/fzf"]
-	path = nvim/.config/nvim/plugged/fzf
-	url = https://github.com/junegunn/fzf.git
