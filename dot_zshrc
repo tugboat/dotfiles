@@ -1,0 +1,4 @@
+source ~/.aliases
+
+. $HOME/.asdf/asdf.sh
+eval "$(starship init zsh)"

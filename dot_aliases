@@ -1,0 +1,14 @@
+alias ll='ls -al' 
+alias dc='docker compose'
+
+# Docked Rails Settings
+alias drails='docked rails'
+alias drails-dev='docked bin/dev'
+alias dbundle='docked bundle'
+alias dyarn='docked yarn'
+alias drake='docked rake'
+alias dgem='docked gem'
+
+# Git shortcuts
+alias gs='git status'
+
